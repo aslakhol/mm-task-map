@@ -13,7 +13,7 @@ const Canvas = (props: {
     const context = canvas?.getContext("2d") ?? null;
 
     if (canvas === null || context === null) {
-      throw new Error("couldn't find canvas");
+      throw new Error("couldn't find either canvas or context");
     }
     draw(context);
   });
