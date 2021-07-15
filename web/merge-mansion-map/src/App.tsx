@@ -3,25 +3,9 @@ import "./App.css";
 import Canvas from "./Canvas";
 
 const App = () => {
-  const draw = (ctx: CanvasRenderingContext2D) => {
-    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-    ctx.fillStyle = "#000000";
-    ctx.beginPath();
-    ctx.arc(50, 100, 20 * Math.sin(100 * 0.05) ** 2, 0, 2 * Math.PI);
-    ctx.fill();
-  };
-
-  const draw2 = (ctx: CanvasRenderingContext2D) => {
-    ctx.fillStyle = "rgb(200, 0, 0)";
-    ctx.fillRect(10, 10, 50, 50);
-
-    ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-    ctx.fillRect(30, 30, 50, 50);
-  };
-
   return (
     <div className="App">
-      <Canvas draw={drawTaskImproved} height={700} width={700} />
+      <Canvas draw={draw} height={700} width={700} />
     </div>
   );
 };
@@ -37,31 +21,23 @@ const foo = {
   Rewards: "3 XP,\u00a0Energy Chest",
 };
 
-const drawTask = (ctx: CanvasRenderingContext2D) => {
-  console.log(foo.Tasknumber + foo["Items Needed"]);
+const draw = (ctx: CanvasRenderingContext2D) => {
   ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-  let rectX = 350;
-  let rectY = 350;
-  let rectWidth = 100;
-  let rectHeight = 50;
-  roundRect(ctx, rectX, rectY, rectWidth, rectHeight, 5, true);
-  ctx.font = "10px Georgia";
-  ctx.textAlign = "center";
-  ctx.textBaseline = "bottom";
-  ctx.fillStyle = "#000000";
+  const taskText =
+    foo.Tasknumber + "\n" + foo.Name + "\n" + foo["Items Needed"];
+  drawTask(ctx, taskText, 350, 200);
+};
 
-  ctx.fillText(
-    foo.Tasknumber,
-    rectX + rectWidth / 2,
-    rectY + rectHeight / 2,
-    rectWidth
-  );
-  ctx.fillText(
-    foo["Items Needed"],
-    rectX + rectWidth / 2,
-    rectY + rectHeight / 2 + 10,
-    rectWidth
-  );
+const drawTask = (
+  ctx: CanvasRenderingContext2D,
+  text: string,
+  x: number,
+  y: number
+) => {
+  const w = 150;
+  const h = 80;
+  roundRect(ctx, x, y, w, h, 5, true);
+  fitTextCenter(ctx, text, x, y, w, h);
 };
 
 const roundRect = (
@@ -89,17 +65,6 @@ const roundRect = (
   } else {
     ctx.fill();
   }
-};
-
-const drawTaskImproved = (ctx: CanvasRenderingContext2D) => {
-  ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-  let rectX = 50;
-  let rectY = 50;
-  let rectWidth = 150;
-  let rectHeight = 80;
-  roundRect(ctx, rectX, rectY, rectWidth, rectHeight, 5, true);
-  const text = foo.Tasknumber + "\n" + foo.Name + "\n" + foo["Items Needed"];
-  fitTextCenter(ctx, text, rectX, rectY, rectWidth, rectHeight);
 };
 
 const fitTextCenter = (
@@ -147,8 +112,8 @@ const fillTextCenter = (
 
   const lines = text.match(/[^\r\n]+/g) || text;
   for (let i = 0; i < lines.length; i++) {
-    let xL = (width - x) / 2;
-    let yL = y + (height / (lines.length + 1)) * (i + 1);
+    const xL = x + width / 2;
+    const yL = y + (height / (lines.length + 1)) * (i + 1);
 
     ctx.fillText(lines[i], xL, yL);
   }
