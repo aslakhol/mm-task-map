@@ -1,33 +1,83 @@
 import React from "react";
+import { TupleType } from "typescript";
 import "./App.css";
 import Canvas from "./Canvas";
-import Edges from "./Edges";
+import { getEdgesArray } from "./edges";
+import { getNodesArray } from "./nodes";
 
 const App = () => {
+  const edgesArray = getEdgesArray();
+  const nodesArray = getNodesArray();
+
   return (
     <div className="App">
-      <Edges />
-      <Canvas draw={draw} height={700} width={700} />
+      <Canvas draw={draw} height={3500} width={7000} />
     </div>
   );
 };
 
 export default App;
 
-const foo = {
-  Tasknumber: "4-1",
-  Name: "Demolish rickety bridge",
-  "Available after": "Level 9",
-  "Opens Task": "4-2",
-  "Items Needed": "Axe,\u00a0Crowbar",
-  Rewards: "3 XP,\u00a0Energy Chest",
-};
-
 const draw = (ctx: CanvasRenderingContext2D) => {
   ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-  const taskText =
-    foo.Tasknumber + "\n" + foo.Name + "\n" + foo["Items Needed"];
-  drawTask(ctx, taskText, 350, 200);
+  const tasks = getNodesArray();
+  const edges = getEdgesArray();
+  const visitedTasks = Array(tasks.length).fill(0);
+  const nodePositions = Array(tasks.length).fill([0, 0]);
+
+  for (let i = 0; i < tasks.length; i++) {
+    drawSpecificTask(ctx, i, 0, 0 + i * 90, visitedTasks, nodePositions, tasks);
+
+    for (let e = 0; e < edges[i].length; e++) {
+      const childIndex = edges[i][e];
+      if (!childIndex) {
+        continue;
+      }
+      console.log(nodePositions[i], tasks[i].Tasknumber, " alskjdlsakj");
+      const xValue = nodePositions[i][0] + 80 * e;
+      const yValue = nodePositions[i][1] + 40;
+      console.log(xValue, yValue, "boo");
+      drawSpecificTask(
+        ctx,
+        childIndex,
+        xValue,
+        yValue,
+        visitedTasks,
+        nodePositions,
+        tasks
+      );
+    }
+
+    console.log(tasks[i].Tasknumber + " e: " + edges[i]);
+  }
+};
+
+const drawSpecificTask = (
+  ctx: CanvasRenderingContext2D,
+  index: number,
+  x: number,
+  y: number,
+  visitedTasks: number[],
+  nodePositions: Array<[number, number]>,
+  tasks: any
+) => {
+  if (visitedTasks[index] === 1) {
+    console.log("skipped task: " + index + " " + tasks[index].Tasknumber);
+    return;
+  }
+  visitedTasks[index] = 1;
+  nodePositions[index] = [x, y];
+
+  drawTask(
+    ctx,
+    tasks[index].Tasknumber +
+      "\n" +
+      tasks[index].Name +
+      "\n" +
+      tasks[index]["Items Needed"],
+    x,
+    y
+  );
 };
 
 const drawTask = (
@@ -36,8 +86,8 @@ const drawTask = (
   x: number,
   y: number
 ) => {
-  const w = 150;
-  const h = 80;
+  const w = 80;
+  const h = 40;
   roundRect(ctx, x, y, w, h, 5, true);
   fitTextCenter(ctx, text, x, y, w, h);
 };
