@@ -1,4 +1,4 @@
-let json = {
+export const json = {
   0: {
     Tasknumber: "4-1",
     Name: "Demolish rickety bridge",

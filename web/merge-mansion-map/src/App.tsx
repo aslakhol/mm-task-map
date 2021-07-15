@@ -1,10 +1,12 @@
 import React from "react";
 import "./App.css";
 import Canvas from "./Canvas";
+import Edges from "./Edges";
 
 const App = () => {
   return (
     <div className="App">
+      <Edges />
       <Canvas draw={draw} height={700} width={700} />
     </div>
   );
