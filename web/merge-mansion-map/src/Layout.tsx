@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import ReactFlow, {
   ReactFlowProvider,
   addEdge,
@@ -8,64 +8,92 @@ import ReactFlow, {
   Node,
   Position,
   ConnectionLineType,
+  useStoreState,
+  Elements,
+  useStoreActions,
 } from "react-flow-renderer";
 import dagre from "dagre";
+
+import _ from "lodash";
 
 // import initialElements from "./initial-elements";
 
 // import "./layouting.css";
 import { getElements } from "./elements";
 
-const dagreGraph = new dagre.graphlib.Graph();
-dagreGraph.setDefaultEdgeLabel(() => ({}));
+// g.setGraph({
+//   marginx: 20,
+//   marginy: 20
+// });
 
 // In order to keep this example simple the node width and height are hardcoded.
 // In a real world app you would use the correct width and height values of
 // const nodes = useStoreState(state => state.nodes) and then node.__rf.width, node.__rf.height
 
 const nodeWidth = 172;
-const nodeHeight = 36;
+const nodeHeight = 82;
 
-const getLayoutedElements = (elements: (Node<any> | Edge<any>)[]) => {
+const createGraphLayout = (elements: Elements): Elements => {
+  const dagreGraph = new dagre.graphlib.Graph();
+
+  dagreGraph.setDefaultEdgeLabel(() => ({}));
   dagreGraph.setGraph({ rankdir: "TB" });
 
-  elements.forEach((el) => {
-    if (isNode(el)) {
-      dagreGraph.setNode(el.id, { width: nodeWidth, height: nodeHeight });
+  elements.forEach((element) => {
+    if (isNode(element)) {
+      dagreGraph.setNode(element.id, {
+        width: element.__rf?.width || nodeWidth,
+        height: element.__rf?.height || nodeHeight,
+      });
     } else {
-      dagreGraph.setEdge(el.source, el.target);
+      dagreGraph.setEdge(element.source, element.target);
     }
   });
+
+  console.log(dagreGraph, "alskjdlksjlkjs", elements[0]);
 
   dagre.layout(dagreGraph);
 
-  return elements.map((el) => {
-    if (isNode(el)) {
-      const nodeWithPosition = dagreGraph.node(el.id);
-      el.targetPosition = Position.Top;
-      el.sourcePosition = Position.Bottom;
-      el.position = {
-        x: nodeWithPosition.x - nodeWidth / 2 + Math.random() / 1000,
-        y: nodeWithPosition.y - nodeHeight / 2,
+  return elements.map((element) => {
+    if (isNode(element)) {
+      const node = dagreGraph.node(element.id);
+      element.position = {
+        x: node.x - node.width / 2,
+        y: node.y - node.height / 2,
       };
     }
 
-    return el;
+    return element;
   });
 };
 
-const initialElements = getElements();
+const NodeDebug = () => {
+  const elements = useStoreState(
+    (state) => [...state.nodes, ...state.edges],
+    _.isEqual
+  );
+  const setElements = useStoreActions((actions) => actions.setElements);
+
+  useEffect(() => {
+    if (elements.length) {
+      const newElements = createGraphLayout(elements);
+      setElements(newElements);
+    }
+  }, [elements]);
+  return null;
+};
 
 const LayoutFlow = () => {
-  const layoutedElements = getLayoutedElements(initialElements);
+  const initialElements = getElements();
 
   return (
     <div className="layoutflow" style={{ height: "100vh" }}>
       <ReactFlowProvider>
         <ReactFlow
-          elements={layoutedElements}
+          elements={initialElements}
           connectionLineType={ConnectionLineType.Bezier}
         />
+        <NodeDebug />
       </ReactFlowProvider>
     </div>
   );

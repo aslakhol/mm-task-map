@@ -15,7 +15,7 @@ const toFlowNode = (task: Task, i: number) => {
   return {
     id: task.taskNumber,
     data: { label: <Label task={task} /> },
-    position: { x: 100, y: 0 + 90 * i },
+    position: { x: 0, y: 0 },
   };
 };
 
