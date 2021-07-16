@@ -1,11 +1,12 @@
 import React from "react";
 import "./App.css";
 import Flow from "./Flow";
+import Layout from "./Layout";
 
 const App = () => {
   return (
     <div className="App">
-      <Flow />
+      <Layout />
     </div>
   );
 };
