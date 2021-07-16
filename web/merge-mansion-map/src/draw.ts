@@ -16,7 +16,6 @@ export const draw = (ctx: CanvasRenderingContext2D) => {
       if (!childIndex) {
         continue;
       }
-      console.log(nodePositions[i], tasks[i].Tasknumber, " alskjdlsakj");
       const xValue = nodePositions[i][0] + 80 * e;
       const yValue = nodePositions[i][1] + 40;
       console.log(xValue, yValue, "boo");
@@ -30,8 +29,6 @@ export const draw = (ctx: CanvasRenderingContext2D) => {
         tasks
       );
     }
-
-    console.log(tasks[i].Tasknumber + " e: " + edges[i]);
   }
 };
 

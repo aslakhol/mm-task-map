@@ -1,12 +1,11 @@
 import React from "react";
 import "./App.css";
-import Canvas from "./Canvas";
-import { draw } from "./draw";
+import Flow from "./Flow";
 
 const App = () => {
   return (
     <div className="App">
-      <Canvas draw={draw} height={3500} width={7000} />
+      <Flow />
     </div>
   );
 };

@@ -7,17 +7,6 @@ export const getEdgesArray = () => {
     indexesFromTaskNumbers(task["Opens Task"])
   );
 
-  // opensTaskArray.map((tasks, i) => {
-  //   let s = "";
-  //   tasks.map((task) => {
-  //     if (task) {
-  //       s += taskObjects[task].Tasknumber + ", ";
-  //     } else {
-  //     }
-  //   });
-  //   console.log(taskObjects[i].Tasknumber + " leads to " + s);
-  // });
-
   return opensTaskArray;
 };
 
