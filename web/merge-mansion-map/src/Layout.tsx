@@ -1,20 +1,11 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React from "react";
 import ReactFlow, {
   ReactFlowProvider,
-  addEdge,
-  removeElements,
   isNode,
-  Edge,
   Node,
-  Position,
-  ConnectionLineType,
-  useStoreState,
   Elements,
-  useStoreActions,
 } from "react-flow-renderer";
 import dagre from "dagre";
-
-import _ from "lodash";
 
 // import initialElements from "./initial-elements";
 
@@ -50,8 +41,6 @@ const createGraphLayout = (elements: Elements): Elements => {
     }
   });
 
-  console.log(dagreGraph, "alskjdlksjlkjs", elements[0]);
-
   dagre.layout(dagreGraph);
 
   return elements.map((element) => {
@@ -67,33 +56,19 @@ const createGraphLayout = (elements: Elements): Elements => {
   });
 };
 
-const NodeDebug = () => {
-  const elements = useStoreState(
-    (state) => [...state.nodes, ...state.edges],
-    _.isEqual
-  );
-  const setElements = useStoreActions((actions) => actions.setElements);
+const nodeHasDimension = (el: Node) => el.__rf.width && el.__rf.height;
 
-  useEffect(() => {
-    if (elements.length) {
-      const newElements = createGraphLayout(elements);
-      setElements(newElements);
-    }
-  }, [elements]);
-  return null;
+const Builder = () => {
+  const initialElements = getElements();
+  const layoutedElements = createGraphLayout(initialElements);
+  return <ReactFlow elements={layoutedElements} />;
 };
 
 const LayoutFlow = () => {
-  const initialElements = getElements();
-
   return (
     <div className="layoutflow" style={{ height: "100vh" }}>
       <ReactFlowProvider>
-        <ReactFlow
-          elements={initialElements}
-          connectionLineType={ConnectionLineType.Bezier}
-        />
-        <NodeDebug />
+        <Builder />
       </ReactFlowProvider>
     </div>
   );
