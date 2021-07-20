@@ -179,7 +179,7 @@ export const json = {
     Tasknumber: "4-23*",
     Name: "Install risers",
     "Available after": "4-22",
-    "Opens Task": "4-24, 4-27, 4-32, 5-1",
+    "Opens Task": "4-24, 4-27, 4-32",
     "Items Needed": "Pliers,\u00a0Box of Screws",
     Rewards: "3 XP,\u00a0Green Box",
   },
