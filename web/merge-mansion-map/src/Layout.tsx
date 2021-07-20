@@ -1,30 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ReactFlow, {
   ReactFlowProvider,
   isNode,
   Node,
   Elements,
+  useStoreState,
+  useStoreActions,
 } from "react-flow-renderer";
 import dagre from "dagre";
 
-// import initialElements from "./initial-elements";
-
-// import "./layouting.css";
 import { getElements } from "./elements";
 
-// g.setGraph({
-//   marginx: 20,
-//   marginy: 20
-// });
+const defaultNodeWidth = 172;
+const defaultNodeHeight = 36;
 
-// In order to keep this example simple the node width and height are hardcoded.
-// In a real world app you would use the correct width and height values of
-// const nodes = useStoreState(state => state.nodes) and then node.__rf.width, node.__rf.height
-
-const nodeWidth = 172;
-const nodeHeight = 82;
-
-const createGraphLayout = (elements: Elements): Elements => {
+const getLayoutedElements = (elements: Elements): Elements => {
   const dagreGraph = new dagre.graphlib.Graph();
 
   dagreGraph.setDefaultEdgeLabel(() => ({}));
@@ -33,8 +23,8 @@ const createGraphLayout = (elements: Elements): Elements => {
   elements.forEach((element) => {
     if (isNode(element)) {
       dagreGraph.setNode(element.id, {
-        width: element.__rf?.width || nodeWidth,
-        height: element.__rf?.height || nodeHeight,
+        width: element.__rf?.width || defaultNodeWidth,
+        height: element.__rf?.height || defaultNodeHeight,
       });
     } else {
       dagreGraph.setEdge(element.source, element.target);
@@ -57,11 +47,30 @@ const createGraphLayout = (elements: Elements): Elements => {
 };
 
 const nodeHasDimension = (el: Node) => el.__rf.width && el.__rf.height;
+const initialElements = getElements();
 
 const Builder = () => {
-  const initialElements = getElements();
-  const layoutedElements = createGraphLayout(initialElements);
-  return <ReactFlow elements={layoutedElements} />;
+  const nodes = useStoreState((state) => state.nodes);
+  const edges = useStoreState((state) => state.edges);
+  const setElements = useStoreActions((actions) => actions.setElements);
+  const [shouldLayout, setShouldLayout] = useState(true);
+
+  useEffect(() => {
+    if (
+      shouldLayout &&
+      nodes.length &&
+      nodes.length > 0 &&
+      nodes.every(nodeHasDimension)
+    ) {
+      const elements = [...nodes, ...edges];
+      const elementsWithLayout = getLayoutedElements(elements);
+
+      setElements(elementsWithLayout);
+      setShouldLayout(false);
+    }
+  }, [shouldLayout, nodes, edges, setElements, setShouldLayout]);
+
+  return <ReactFlow elements={initialElements} />;
 };
 
 const LayoutFlow = () => {
