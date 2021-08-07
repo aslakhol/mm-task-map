@@ -7,19 +7,7 @@ import ReactFlow, {
 } from "react-flow-renderer";
 import dagre from "dagre";
 
-// import initialElements from "./initial-elements";
-
-// import "./layouting.css";
 import { getElements } from "./elements";
-
-// g.setGraph({
-//   marginx: 20,
-//   marginy: 20
-// });
-
-// In order to keep this example simple the node width and height are hardcoded.
-// In a real world app you would use the correct width and height values of
-// const nodes = useStoreState(state => state.nodes) and then node.__rf.width, node.__rf.height
 
 const nodeWidth = 172;
 const nodeHeight = 82;
