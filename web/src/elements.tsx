@@ -1,6 +1,6 @@
 import React from "react";
-import ReactFlow from "react-flow-renderer";
-import { getNodesArray, Task } from "./nodes";
+import { getNodesArray } from "./nodes";
+import { CleanedTask } from "./task";
 import { Edge, isEdge, Node } from "./types";
 
 export const getElements = () => {
@@ -11,7 +11,7 @@ export const getElements = () => {
   return elements;
 };
 
-const toFlowNode = (task: Task, i: number) => {
+const toFlowNode = (task: CleanedTask, i: number) => {
   return {
     id: task.taskNumber,
     data: { label: <Label task={task} /> },
@@ -19,7 +19,7 @@ const toFlowNode = (task: Task, i: number) => {
   };
 };
 
-const Label = (props: { task: Task }) => {
+const Label = (props: { task: CleanedTask }) => {
   const { task } = props;
   return (
     <>
@@ -30,7 +30,7 @@ const Label = (props: { task: Task }) => {
   );
 };
 
-const getEdges = (tasks: Task[]) => {
+const getEdges = (tasks: CleanedTask[]) => {
   const edges = tasks.map((task) => {
     const split = task.opensTask.split(", ");
 

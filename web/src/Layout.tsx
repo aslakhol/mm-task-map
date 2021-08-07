@@ -20,15 +20,20 @@ const createGraphLayout = (elements: Elements): Elements => {
 
   elements.forEach((element) => {
     if (isNode(element)) {
+      console.log("isnode");
+
       dagreGraph.setNode(element.id, {
         width: element.__rf?.width || nodeWidth,
         height: element.__rf?.height || nodeHeight,
       });
     } else {
+      console.log("is not node");
+
       dagreGraph.setEdge(element.source, element.target);
     }
   });
 
+  console.log("dagreGraph", dagreGraph);
   dagre.layout(dagreGraph);
 
   return elements.map((element) => {

@@ -29,27 +29,22 @@ def scrapeWikiArticle(url):
     print(linkToScrape)
     scrapeWikiArticle("https://en.wikipedia.org" + linkToScrape["href"])
 
-
 def scrapeFandom(url):
-    print(url)
     response = requests.get(
         url=url,
     )
 
     soup = BeautifulSoup(response.content, "html.parser")
-    # table = soup.find("table")
-    # print(soup)
 
     tables = soup.find_all("table")
-
-    print(type(tables))
-    print(len(tables))
-
     dfs = pd.read_html(str(tables))
-    tasks = dfs[0]
-    print(tasks)
-    json = tasks.to_json("./export.json", orient="index")
-    print(json)
+
+    for df in dfs:
+        df.rename(columns={"Rewards": "Reward"}, inplace=True)
+
+    tasks = pd.concat(dfs, ignore_index=True)
+
+    tasks.to_json("./export.json", orient="records")
 
 
-scrapeFandom("https://merge-mansion.fandom.com/wiki/Frog_Pond_Falls")
+scrapeFandom("https://merge-mansion.fandom.com/wiki/Tasks")

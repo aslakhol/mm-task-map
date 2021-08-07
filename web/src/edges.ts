@@ -1,10 +1,13 @@
-import { json } from "./export";
+import json from "./export.json";
+import { Task } from "./task";
+
+const tasks: Task[] = json;
 
 export const getEdgesArray = () => {
-  const taskObjects = Object.values(json);
+  const taskObjects = Object.values(tasks);
 
   const opensTaskArray = taskObjects.map((task) =>
-    indexesFromTaskNumbers(task["Opens Task"])
+    indexesFromTaskNumbers(task["Opens Task"] || "-")
   );
 
   return opensTaskArray;
