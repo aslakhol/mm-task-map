@@ -1,11 +1,16 @@
 import json from "./export.json";
-import { Task } from "./task";
+import { Task, CleanedTask } from "./types";
 
 const typedJson: Task[] = json;
 
 export const getNodesArray = () => {
   const tasks = Object.values(typedJson);
+  const cleanedTasks = cleanTasks(tasks);
 
+  return cleanedTasks;
+};
+
+const cleanTasks = (tasks: Task[]): CleanedTask[] => {
   const cleanedTasks = tasks.map((task) => {
     const cleanedTask = {
       taskNumber: task.Tasknumber.replace("*", ""),
@@ -17,6 +22,5 @@ export const getNodesArray = () => {
     };
     return cleanedTask;
   });
-
   return cleanedTasks;
 };

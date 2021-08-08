@@ -1,5 +1,5 @@
 import json from "./export.json";
-import { Task } from "./task";
+import { Task } from "./types";
 
 const tasks: Task[] = json;
 

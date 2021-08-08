@@ -1,17 +1,16 @@
 import React from "react";
 import { getNodesArray } from "./nodes";
-import { CleanedTask } from "./task";
-import { Edge, isEdge, Node } from "./types";
+import { Edge, isEdge, Node, CleanedTask } from "./types";
 
 export const getElements = () => {
   const tasks = getNodesArray();
-  const nodes: Node[] = tasks.map((task, index) => toFlowNode(task, index));
+  const nodes: Node[] = tasks.map((task) => toFlowNode(task));
   const edges: Edge[] = getEdges(tasks);
   const elements: (Node | Edge)[] = [...nodes, ...edges];
   return elements;
 };
 
-const toFlowNode = (task: CleanedTask, i: number) => {
+const toFlowNode = (task: CleanedTask) => {
   return {
     id: task.taskNumber,
     data: { label: <Label task={task} /> },
