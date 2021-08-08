@@ -1,6 +1,6 @@
 import React from "react";
 import FlowNodeLabel from "./FlowNodeLabel";
-import { CleanedTask } from "./types";
+import { CleanedTask } from "../types";
 
 export const flowNodes = (tasks: CleanedTask[]) => {
   return tasks.map((task) => flowNode(task));

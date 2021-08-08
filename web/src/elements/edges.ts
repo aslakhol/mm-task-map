@@ -1,4 +1,4 @@
-import { isEdge, CleanedTask } from "./types";
+import { isEdge, CleanedTask } from "../types";
 
 export const flowEdges = (tasks: CleanedTask[]) => {
   const edges = tasks.map((task) => flowEdge(task));

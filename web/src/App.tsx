@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Layout from "./Layout";
+import Digraph from "./Digraph";
 
 const App = () => {
   return (
     <div className="App">
-      <Layout />
+      <Digraph />
     </div>
   );
 };

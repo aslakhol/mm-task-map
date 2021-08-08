@@ -1,5 +1,5 @@
 import React from "react";
-import { CleanedTask } from "./types";
+import { CleanedTask } from "../types";
 
 const FlowNodeLabel = (props: { task: CleanedTask }) => {
   const { task } = props;

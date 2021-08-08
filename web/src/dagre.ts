@@ -1,17 +1,10 @@
-import React from "react";
-import ReactFlow, {
-  ReactFlowProvider,
-  isNode,
-  Elements,
-} from "react-flow-renderer";
+import { isNode, Elements } from "react-flow-renderer";
 import dagre from "dagre";
-
-import { getElements } from "./elements";
 
 const nodeWidth = 172;
 const nodeHeight = 82;
 
-const createGraphLayout = (elements: Elements): Elements => {
+export const createGraphLayout = (elements: Elements): Elements => {
   const dagreGraph = new dagre.graphlib.Graph();
 
   dagreGraph.setDefaultEdgeLabel(() => ({}));
@@ -42,21 +35,3 @@ const createGraphLayout = (elements: Elements): Elements => {
     return element;
   });
 };
-
-const Builder = () => {
-  const initialElements = getElements();
-  const layoutedElements = createGraphLayout(initialElements);
-  return <ReactFlow elements={layoutedElements} />;
-};
-
-const LayoutFlow = () => {
-  return (
-    <div className="layoutflow" style={{ height: "100vh" }}>
-      <ReactFlowProvider>
-        <Builder />
-      </ReactFlowProvider>
-    </div>
-  );
-};
-
-export default LayoutFlow;
