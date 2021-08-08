@@ -1,5 +1,5 @@
-import { CleanedTask, Task } from "./types";
-import json from "./export.json";
+import { CleanedTask, Task } from "../types";
+import json from "../export.json";
 
 export const getTasks = () => {
   const tasks: Task[] = json;
@@ -20,7 +20,7 @@ const cleanTask = (task: Task): CleanedTask => {
     taskNumber: task.Tasknumber.replace("*", ""),
     name: task.Name,
     availableAfter: task["Available after"].replace("*", ""),
-    opensTask: task["Opens Task"]?.replace("*", "") || "-",
+    opensTask: task["Opens Task"]?.replace("*", "").replace(".", "-") || "-",
     itemsNeeded: task["Items Needed"],
     rewards: task.Reward,
   };
