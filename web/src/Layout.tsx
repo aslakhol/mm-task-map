@@ -2,7 +2,6 @@ import React from "react";
 import ReactFlow, {
   ReactFlowProvider,
   isNode,
-  Node,
   Elements,
 } from "react-flow-renderer";
 import dagre from "dagre";
