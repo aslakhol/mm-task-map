@@ -13,8 +13,8 @@ const flowEdge = (task: CleanedTask) => {
 
 const edgeForTask = (edge: TaskId, task: CleanedTask) => {
   return {
-    id: task.taskNumber + "->" + edge.id,
-    source: task.taskNumber,
+    id: task.taskNumber.id + "->" + edge.id,
+    source: task.taskNumber.id,
     target: edge.id,
   };
 };

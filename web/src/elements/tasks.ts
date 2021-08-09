@@ -1,6 +1,8 @@
 import { CleanedTask, Task, TaskId } from "../types";
 import json from "../export.json";
 
+const taskNumberRegex = /(\d+)[-.](\d+)/g;
+
 export const getTasks = () => {
   const tasks: Task[] = json;
   const cleanedTasks = cleanTasks(tasks);
@@ -17,7 +19,7 @@ const cleanTasks = (tasks: Task[]): CleanedTask[] => {
 
 const cleanTask = (task: Task): CleanedTask => {
   const cleanedTask = {
-    taskNumber: task.Tasknumber.replace("*", ""),
+    taskNumber: taskNumber(task.Tasknumber),
     name: task.Name,
     availableAfter: task["Available after"].replace("*", ""),
     opensTask: opensTask(task["Opens Task"] || "-"),
@@ -27,15 +29,23 @@ const cleanTask = (task: Task): CleanedTask => {
   return cleanedTask;
 };
 
-const opensTask = (opensTaskString: string): TaskId[] => {
-  const taskNumberRegex = /(\d+)[-.](\d+)/g;
-  const taskIds: TaskId[] = [];
+const taskNumber = (taskNumberString: string): TaskId => {
+  const matches = taskNumberString.matchAll(taskNumberRegex);
+  const foundNumbers = Array.from(matches);
 
-  const matches = opensTaskString.matchAll(taskNumberRegex);
-
-  for (const match of matches) {
-    taskIds.push(taskId(match[1], match[2]));
+  if (foundNumbers.length > 1) {
+    throw new Error("More than one task number found");
   }
+  return taskId(foundNumbers[0][1], foundNumbers[0][2]);
+};
+
+const opensTask = (opensTaskString: string): TaskId[] => {
+  const matches = opensTaskString.matchAll(taskNumberRegex);
+  const foundNumbers = Array.from(matches);
+
+  const taskIds = foundNumbers.map((foundNumber) =>
+    taskId(foundNumber[1], foundNumber[2])
+  );
 
   return taskIds;
 };

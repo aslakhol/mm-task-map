@@ -5,7 +5,7 @@ const FlowNodeLabel = (props: { task: CleanedTask }) => {
   const { task } = props;
   return (
     <>
-      <div>{task.taskNumber}</div>
+      <div>{task.taskNumber.id}</div>
       <div>{task.name}</div>
       <div>{task.itemsNeeded}</div>
     </>

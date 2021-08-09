@@ -8,7 +8,7 @@ export const flowNodes = (tasks: CleanedTask[]) => {
 
 const flowNode = (task: CleanedTask) => {
   return {
-    id: task.taskNumber,
+    id: task.taskNumber.id,
     data: { label: <FlowNodeLabel task={task} /> },
     position: { x: 0, y: 0 },
   };
