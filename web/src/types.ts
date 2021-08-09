@@ -33,7 +33,13 @@ export type CleanedTask = {
   taskNumber: string;
   name: string;
   availableAfter: string;
-  opensTask: string;
+  opensTask: TaskId[];
   itemsNeeded: string;
   rewards: string;
+};
+
+export type TaskId = {
+  area: number;
+  task: number;
+  id: string;
 };
