@@ -21,7 +21,7 @@ const cleanTask = (task: Task): CleanedTask => {
   const cleanedTask = {
     taskNumber: taskNumber(task.Tasknumber),
     name: task.Name,
-    availableAfter: task["Available after"].replace("*", ""),
+    availableAfter: task["Available after"] || "-".replace("*", ""),
     opensTask: opensTask(task["Opens Task"] || "-"),
     itemsNeeded: task["Items Needed"],
     rewards: task.Reward,
