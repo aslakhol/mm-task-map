@@ -14,6 +14,7 @@ const Filter = (props: Props) => {
       id="filterValue"
       onChange={({ target: { value } }) => setFilterValue(value)}
       defaultValue={filterValue}
+      className="filter"
     >
       <option value="all">All</option>
       <option value="1">1</option>

@@ -22,3 +22,15 @@
   padding: 20px;
   width: 300px;
 }
+
+.filter {
+  position: fixed;
+  top: 0;
+  left: 50px;
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: antiquewhite;
+  margin: 20px;
+  padding: 5px;
+  z-index: 99;
+}
