@@ -5,7 +5,17 @@ import { createGraphLayout } from "./dagre";
 
 const Builder = () => {
   const initialElements = getElements();
-  const layoutedElements = createGraphLayout(initialElements);
+
+  const targetId = "3";
+  const filter = (element: any) =>
+    element.id !== targetId &&
+    element.source?.split("-")[0] !== targetId &&
+    element.source?.split("-")[0] !== targetId;
+
+  const filteredElements = initialElements.filter(filter);
+
+  console.log(filteredElements);
+  const layoutedElements = createGraphLayout(filteredElements);
   return <ReactFlow elements={layoutedElements} />;
 };
 
