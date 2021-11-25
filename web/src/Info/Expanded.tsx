@@ -33,7 +33,7 @@ const Expanded = (props: {
         <a
           href="mailto:aslakhol@gmail.com?subject=Request update to task map"
           target="_blank"
-          referrerPolicy="no-referrer"
+          rel="noreferrer"
         >
           send me an email.
         </a>
