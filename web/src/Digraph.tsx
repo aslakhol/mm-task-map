@@ -8,13 +8,11 @@ const Builder = () => {
 
   const targetId = "3";
   const filter = (element: any) =>
-    element.id !== targetId &&
-    element.source?.split("-")[0] !== targetId &&
-    element.source?.split("-")[0] !== targetId;
+    (element.id.split("-")[0] === targetId && !element.source) ||
+    (element.source?.split("-")[0] === targetId &&
+      element.target?.split("-")[0] === targetId);
 
   const filteredElements = initialElements.filter(filter);
-
-  console.log(filteredElements);
   const layoutedElements = createGraphLayout(filteredElements);
   return <ReactFlow elements={layoutedElements} />;
 };
