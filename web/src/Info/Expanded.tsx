@@ -28,7 +28,15 @@ const Expanded = (props: {
       </p>
       <p>
         To update from the wiki I have to run some commands manually, but I'll
-        automate this if it becomes a big burden.
+        automate this if it becomes a big burden. To request an update of the
+        map{" "}
+        <a
+          href="mailto:aslakhol@gmail.com?subject=Request update to task map"
+          target="_blank"
+          referrerPolicy="no-referrer"
+        >
+          send me an email.
+        </a>
       </p>
       <strong>Source code</strong>
       <p>
