@@ -20,12 +20,12 @@ export const isEdge = (e: Edge | undefined): e is Edge => {
 };
 
 export type Task = {
-  Tasknumber: string;
+  "#": string;
   Name: string | null;
-  "Available after"?: string | null;
-  "Opens Task": string | null;
-  "Items Needed": string | null;
-  Reward: string | null;
+  Needs?: string | null;
+  Opens: string | null;
+  Items: string | null;
+  Reward: string | number | null;
   "Sub Area"?: string | null;
 };
 

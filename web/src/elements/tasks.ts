@@ -19,12 +19,12 @@ const cleanTasks = (tasks: Task[]): CleanedTask[] => {
 
 const cleanTask = (task: Task): CleanedTask => {
   const cleanedTask = {
-    taskNumber: taskNumber(task.Tasknumber),
+    taskNumber: taskNumber(task["#"]),
     name: task.Name || "",
-    availableAfter: task["Available after"] || "-".replace("*", ""),
-    opensTask: opensTask(task["Opens Task"] || "-"),
-    itemsNeeded: task["Items Needed"] || "",
-    rewards: task.Reward || "",
+    availableAfter: task.Needs || "-".replace("*", ""),
+    opensTask: opensTask(task.Opens || "-"),
+    itemsNeeded: task.Items || "",
+    rewards: "" + task.Reward || "",
   };
   return cleanedTask;
 };
