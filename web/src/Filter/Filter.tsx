@@ -33,6 +33,7 @@ const Filter = (props: Props) => {
       <option value="14">14 Plaza</option>
       <option value="15">15 Pier</option>
       <option value="16">16 The Old Well</option>
+      <option value="17">17 Pool House</option>
     </select>
   );
 };

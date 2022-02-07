@@ -348,7 +348,7 @@
     "Name": "Paint the gate",
     "Needs": "3-18",
     "Opens": "-",
-    "Items": "Paintbrush (L4) Paint Can (L2)",
+    "Items": "Paint Brush (L4) Paint Can (L2)",
     "Reward": "1"
   },
   {
@@ -540,7 +540,7 @@
     "Name": "Paint bridge",
     "Needs": "4-4",
     "Opens": "4-7",
-    "Items": "Paintbrush (L4) Paint Can (L2)",
+    "Items": "Paint Brush (L4) Paint Can (L2)",
     "Reward": "8"
   },
   {
@@ -708,7 +708,7 @@
     "Name": "Paint stairs",
     "Needs": "4-23",
     "Opens": "4-28",
-    "Items": "Paintbrush (L4) Paint Can (L2)",
+    "Items": "Paint Brush (L4) Paint Can (L2)",
     "Reward": "1"
   },
   {
@@ -813,7 +813,7 @@
     "Needs": "5-2",
     "Opens": "5-4, 5-12",
     "Items": "Gardening Gloves (L3) Mallet (L3)",
-    "Reward": "3"
+    "Reward": "8"
   },
   {
     "#": "5-4",
@@ -829,7 +829,7 @@
     "Needs": "5-4",
     "Opens": "5-6",
     "Items": "Knife (L6)",
-    "Reward": "1 Red Box (L1)"
+    "Reward": "8 Red Box (L1)"
   },
   {
     "#": "5-6",
@@ -837,7 +837,7 @@
     "Needs": "5-5",
     "Opens": "-",
     "Items": "Pliers (L5)",
-    "Reward": "3 Green Box (L1)"
+    "Reward": "8 Green Box (L1)"
   },
   {
     "#": "5-7",
@@ -845,7 +845,7 @@
     "Needs": "5-4",
     "Opens": "5-8",
     "Items": "Gardening Gloves (L3) Axe (L4)",
-    "Reward": "1"
+    "Reward": "8"
   },
   {
     "#": "5-8",
@@ -853,7 +853,7 @@
     "Needs": "5-7",
     "Opens": "5-9",
     "Items": "Sponge (L3) Liquid Soap (L3)",
-    "Reward": "3 Green Box (L1)"
+    "Reward": "8 Green Box (L1)"
   },
   {
     "#": "5-9",
@@ -865,10 +865,10 @@
   },
   {
     "#": "5-10*",
-    "Name": "Organize desk/Dress the Desk",
-    "Needs": "5-9",
+    "Name": "Organize desk",
+    "Needs": "5-9 5-18",
     "Opens": "5-11, 5-34",
-    "Items": "Duster (L8)",
+    "Items": "Duster (L8) Liquid Soap (L3)",
     "Reward": "8 Brown Chest (L1)"
   },
   {
@@ -885,7 +885,7 @@
     "Needs": "5-3",
     "Opens": "5-13, 5-14",
     "Items": "Gardening Gloves (L3) Axe (L4)",
-    "Reward": "1 Green Box (L1)"
+    "Reward": "8 Green Box (L1)"
   },
   {
     "#": "5-13",
@@ -893,7 +893,7 @@
     "Needs": "5-12",
     "Opens": "5-20",
     "Items": "Sponge (L3) Liquid Soap (L3)",
-    "Reward": "1"
+    "Reward": "8"
   },
   {
     "#": "5-14",
@@ -906,7 +906,7 @@
   {
     "#": "5-15",
     "Name": "Dust off cobwebs",
-    "Needs": "5-14 5-18",
+    "Needs": "5-14",
     "Opens": "5-16, 5-17, 5-20",
     "Items": "Duster (L8)",
     "Reward": "8 Energy Chest (L1)"
@@ -917,7 +917,7 @@
     "Needs": "5-15",
     "Opens": "-",
     "Items": "Pruning Shears (L3) Gardening Gloves (L3)",
-    "Reward": "1"
+    "Reward": "8"
   },
   {
     "#": "5-17",
@@ -925,13 +925,13 @@
     "Needs": "5-15",
     "Opens": "5-18",
     "Items": "Hammer (L6) Wood (L4)",
-    "Reward": "3"
+    "Reward": "8"
   },
   {
     "#": "5-18",
     "Name": "Add fresh coat of paint 1",
     "Needs": "5-17",
-    "Opens": "5-19, 5-15",
+    "Opens": "5-19, 5-10",
     "Items": "Paint Roller (L9)2 Paint Can (L4)",
     "Reward": "20 Fancy Blue Chest (L1)"
   },
@@ -941,7 +941,7 @@
     "Needs": "5-18",
     "Opens": "-",
     "Items": "Spray Bottle (L5) Liquid Soap (L3)",
-    "Reward": "1"
+    "Reward": "8"
   },
   {
     "#": "5-20",
@@ -949,7 +949,7 @@
     "Needs": "5-13 5-15",
     "Opens": "5-21",
     "Items": "Mallet (L3)3 Screws (L5)",
-    "Reward": "1"
+    "Reward": "8"
   },
   {
     "#": "5-21",
@@ -970,10 +970,10 @@
   {
     "#": "5-23",
     "Name": "Unpack boxes on the side table",
-    "Needs": "5-22",
+    "Needs": "5-22 ?",
     "Opens": "5-24",
     "Items": "Knife (L6) Gardening Gloves (L3)",
-    "Reward": "3 Green Box (L1)"
+    "Reward": "8 Green Box (L1)"
   },
   {
     "#": "5-24",
@@ -981,15 +981,15 @@
     "Needs": "5-23",
     "Opens": "5-25",
     "Items": "Spray Bottle (L5) Cloth (L1)",
-    "Reward": "1 Plain Box (L1)"
+    "Reward": "8 Plain Box (L1)"
   },
   {
     "#": "5-25",
     "Name": "Finish job \u2013 put up a sign",
     "Needs": "5-24",
     "Opens": "-",
-    "Items": "Paintbrush (L4) Paint Can (L3)",
-    "Reward": "3"
+    "Items": "Paint Brush (L4) Paint Can (L3)",
+    "Reward": "8"
   },
   {
     "#": "5-26",
@@ -1005,7 +1005,7 @@
     "Needs": "5-26",
     "Opens": "5-28",
     "Items": "Mallet (L3) Pliers (L5)",
-    "Reward": "1"
+    "Reward": "8"
   },
   {
     "#": "5-28",
@@ -1021,7 +1021,7 @@
     "Needs": "5-28",
     "Opens": "5-30",
     "Items": "Sponge (L3) Power Detergent (L4)",
-    "Reward": "3"
+    "Reward": "8"
   },
   {
     "#": "5-30",
@@ -1029,14 +1029,14 @@
     "Needs": "5-29",
     "Opens": "5-31",
     "Items": "Hammer (L6)2 Wood (L4)",
-    "Reward": "3"
+    "Reward": "8"
   },
   {
     "#": "5-31",
     "Name": "Fix hood back in place",
     "Needs": "5-30",
     "Opens": "5-32",
-    "Items": "Screwdriver (L8) Screws (L5)",
+    "Items": "Screwdriver (L8)2 Screws (L5)",
     "Reward": "8 Fancy Blue Chest (L1)"
   },
   {
@@ -1045,7 +1045,7 @@
     "Needs": "5-31",
     "Opens": "5-33",
     "Items": "Mallet (L3) Wood (L4)",
-    "Reward": "1"
+    "Reward": "8"
   },
   {
     "#": "5-33",
@@ -1053,7 +1053,7 @@
     "Needs": "5-32",
     "Opens": "5-34",
     "Items": "Pliers (L5)4 Post Light (L6)",
-    "Reward": "1"
+    "Reward": "8"
   },
   {
     "#": "5-34",
@@ -1061,7 +1061,7 @@
     "Needs": "5-10 5-33",
     "Opens": "5-35",
     "Items": "Gardening Gloves (L3) Pruning Shears (L3)",
-    "Reward": "1"
+    "Reward": "8"
   },
   {
     "#": "5-35",
@@ -1076,8 +1076,8 @@
     "Name": "Add fresh coat of paint",
     "Needs": "5-35",
     "Opens": "5-37, 5-39",
-    "Items": "Paintbrush (L4) Paint Can (L3)",
-    "Reward": "3"
+    "Items": "Paint Brush (L4) Paint Can (L3)",
+    "Reward": "8"
   },
   {
     "#": "5-37",
@@ -1093,7 +1093,7 @@
     "Needs": "5-37",
     "Opens": "-",
     "Items": "2 Chair (L5)",
-    "Reward": "1"
+    "Reward": "8"
   },
   {
     "#": "5-39",
@@ -1101,7 +1101,7 @@
     "Needs": "5-36",
     "Opens": "5-40",
     "Items": "Mallet (L3)2 Screws (L5)",
-    "Reward": "1"
+    "Reward": "8"
   },
   {
     "#": "5-40*",
@@ -1348,7 +1348,7 @@
     "Name": "Fix and restore front door",
     "Needs": "6-29",
     "Opens": "6-31",
-    "Items": "Paintbrush (L4) Paint Can (L3)",
+    "Items": "Paint Brush (L4) Paint Can (L3)",
     "Reward": "1 Green Box (L1)"
   },
   {
@@ -1396,7 +1396,7 @@
     "Name": "Fix sign",
     "Needs": "6-35",
     "Opens": "6-37",
-    "Items": "Paintbrush (L4) Paint Can (L2)",
+    "Items": "Paint Brush (L4) Paint Can (L2)",
     "Reward": "1"
   },
   {
@@ -3604,7 +3604,7 @@
     "Name": "Paint the mailbox",
     "Needs": "12-23",
     "Opens": "-",
-    "Items": "Paintbrush (L4),2 Paint Can (L4)",
+    "Items": "Paint Brush (L4),2 Paint Can (L4)",
     "Reward": "50"
   },
   {
@@ -4788,7 +4788,7 @@
     "Name": "Finish Bell",
     "Needs": "14-28 14-29",
     "Opens": "14-31, 14-32",
-    "Items": "Paintbrush (L4) Paint Can (L4)",
+    "Items": "Paint Brush (L4) Paint Can (L4)",
     "Reward": "3 Energy Chest (L1)"
   },
   {
@@ -4876,7 +4876,7 @@
     "Name": "Paint Carriage",
     "Needs": "14-40",
     "Opens": "14-42",
-    "Items": "Paintbrush (L4) Paint Can (L4)",
+    "Items": "Paint Brush (L4) Paint Can (L4)",
     "Reward": "8"
   },
   {
@@ -5156,7 +5156,7 @@
     "Name": "Paint bridge",
     "Needs": "15-4",
     "Opens": "15-6",
-    "Items": "Paintbrush (L4) Paint Can (L4)",
+    "Items": "Paint Brush (L4) Paint Can (L4)",
     "Reward": "50 Fancy Blue Chest (L1)"
   },
   {
@@ -5988,7 +5988,7 @@
     "Name": "Paint red stripes",
     "Needs": "15-108",
     "Opens": "15-110",
-    "Items": "Paintbrush (L4) Paint Can (L4)",
+    "Items": "Paint Brush (L4) Paint Can (L4)",
     "Reward": "50 Brown Chest (L1)"
   },
   {
@@ -5996,7 +5996,7 @@
     "Name": "Paint blue stripes",
     "Needs": "15-109",
     "Opens": "15-111",
-    "Items": "Paintbrush (L4) Paint Can (L3)",
+    "Items": "Paint Brush (L4) Paint Can (L3)",
     "Reward": "50 Gift Box (L1)"
   },
   {
@@ -6012,7 +6012,7 @@
     "Name": "Paint welcome text",
     "Needs": "15-111",
     "Opens": "-",
-    "Items": "Paintbrush (L4)",
+    "Items": "Paint Brush (L4)",
     "Reward": "8"
   },
   {
@@ -6108,7 +6108,7 @@
     "Name": "Fix wall",
     "Needs": "16-74",
     "Opens": "16-13",
-    "Items": "Paintbrush (L4)  Paint Can (L4)",
+    "Items": "Paint Brush (L4)  Paint Can (L4)",
     "Reward": "8 XP"
   },
   {
@@ -6284,7 +6284,7 @@
     "Name": "Fix wall",
     "Needs": "16-34",
     "Opens": "16-36",
-    "Items": "Paintbrush (L4)  Paint Can (L4)",
+    "Items": "Paint Brush (L4)  Paint Can (L4)",
     "Reward": "8 XP"
   },
   {
@@ -6380,7 +6380,7 @@
     "Name": "Paint the chair",
     "Needs": "16-46",
     "Opens": "16-48",
-    "Items": "Paintbrush (L4)  Paint Can (L4)",
+    "Items": "Paint Brush (L4)  Paint Can (L4)",
     "Reward": "8 XP"
   },
   {
@@ -6598,5 +6598,1181 @@
     "Opens": "16-12",
     "Items": "Vase (L4)  Vase (L7)",
     "Reward": "8 XP"
+  },
+  {
+    "#": "17-1",
+    "Name": "Open jammed Pool House door",
+    "Needs": null,
+    "Opens": "17-2",
+    "Items": "Crowbar (L7)",
+    "Reward": "20, Bronze Coin Chest (L1)"
+  },
+  {
+    "#": "17-2",
+    "Name": "Clean floor",
+    "Needs": "17-1",
+    "Opens": "17-3",
+    "Items": "Dustpan (L7)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-3",
+    "Name": "Clean spider webs",
+    "Needs": "17-2",
+    "Opens": "17-4",
+    "Items": "Gardening Gloves (L2), Spray Bottle (L5)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-4",
+    "Name": "Remove broken tv",
+    "Needs": "17-3",
+    "Opens": "17-5,17-17",
+    "Items": "Gardening Gloves (L2)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-5",
+    "Name": "Remove wooden planks",
+    "Needs": "17-4",
+    "Opens": "17-6",
+    "Items": "Axe (L4), Gardening Gloves (L3)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-6",
+    "Name": "Fix floor",
+    "Needs": "17-5",
+    "Opens": "17-7",
+    "Items": "Mallet (L3), Wood (L4)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-7",
+    "Name": "Fix broken side panels",
+    "Needs": "17-6",
+    "Opens": "17-8",
+    "Items": "Hammer (L6), Screws (L3)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-8",
+    "Name": "Place top counter",
+    "Needs": "17-7",
+    "Opens": "17-9",
+    "Items": "Saw (L10),2x Wood (L4)",
+    "Reward": "50 ,\u00a0Gift Box"
+  },
+  {
+    "#": "17-9",
+    "Name": "Fix chairs",
+    "Needs": "17-8",
+    "Opens": "17-10",
+    "Items": "3x High Stool (L4)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-10",
+    "Name": "Clean spider webs",
+    "Needs": "17-9",
+    "Opens": "17-11",
+    "Items": "Duster (L8)",
+    "Reward": "20 , Energy Chest (L1)"
+  },
+  {
+    "#": "17-11",
+    "Name": "Remove dust sheet",
+    "Needs": "17-10",
+    "Opens": "17-12",
+    "Items": "Gardening Gloves (L3)  Bucket (L2)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-12",
+    "Name": "Clean book case",
+    "Needs": "17-11",
+    "Opens": "17-13",
+    "Items": "Brush (L6)  Liquid Soap (L3)",
+    "Reward": "20 \u00a0Red Box"
+  },
+  {
+    "#": "17-13",
+    "Name": "Restore and polish the bookcase",
+    "Needs": "17-12",
+    "Opens": "17-14",
+    "Items": "2x Cloth (L1) Polishing Wax (L7)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-14",
+    "Name": "Fix wallpaper",
+    "Needs": "17-13",
+    "Opens": "17-15",
+    "Items": "Paint Roller (L9),  Wooden Stool (L2)",
+    "Reward": "50 , \u00a0Brown Chest (I)"
+  },
+  {
+    "#": "17-15",
+    "Name": "Restore and polish right side speaker",
+    "Needs": "17-14",
+    "Opens": "17-16",
+    "Items": "Cloth (L1),  Turpentine (L6)",
+    "Reward": "20 \u00a0Red Box"
+  },
+  {
+    "#": "17-16",
+    "Name": "Buy new TV and glasses",
+    "Needs": "17-15",
+    "Opens": "17-46",
+    "Items": "1500",
+    "Reward": "8"
+  },
+  {
+    "#": "17-17",
+    "Name": "Clean spider webs",
+    "Needs": "17-4",
+    "Opens": "17-18",
+    "Items": "Duster (L8)",
+    "Reward": "20 , Energy Chest (L1)"
+  },
+  {
+    "#": "17-18",
+    "Name": "Remove lamp",
+    "Needs": "17-17",
+    "Opens": "17-19",
+    "Items": "Gardening Gloves (L3),  Empty Seed Bag (L1)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-19",
+    "Name": "Remove old rug",
+    "Needs": "17-18",
+    "Opens": "17-20",
+    "Items": "Gardening Gloves (L3),  Empty Seed Bag (L1)",
+    "Reward": "8 Red Box"
+  },
+  {
+    "#": "17-20",
+    "Name": "Clean the floor",
+    "Needs": "17-19",
+    "Opens": "17-21",
+    "Items": "Dustpan (L7)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-21",
+    "Name": "Clean rubber plant",
+    "Needs": "17-20",
+    "Opens": "17-22",
+    "Items": "Duster (L8)",
+    "Reward": "20 Bronze Coin Chest (L1)"
+  },
+  {
+    "#": "17-22",
+    "Name": "Wash and place rug on the floor",
+    "Needs": "17-21",
+    "Opens": "17-23",
+    "Items": "Brush (L6)  Power Detergent (L4)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-23",
+    "Name": "Clean sofa side table",
+    "Needs": "17-22",
+    "Opens": "17-24",
+    "Items": "Sponge (L3),  Turpentine (L6)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-24",
+    "Name": "Restore and place lamp",
+    "Needs": "17-23",
+    "Opens": "17-25",
+    "Items": "2x Ball of Yarn (L3)  Screwdriver (L8)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-25",
+    "Name": "Remove debris",
+    "Needs": "17-24",
+    "Opens": "17-26",
+    "Items": "Gardening Gloves (L3)  Two Empty Seed Bags (L2)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-26",
+    "Name": "Clean up spider webs",
+    "Needs": "17-25",
+    "Opens": "17-27",
+    "Items": "Bucket (L2)  Brush (L6)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-27",
+    "Name": "Remove old rolled rug",
+    "Needs": "17-26",
+    "Opens": "17-28",
+    "Items": "Wheelbarrow (L9)",
+    "Reward": "50 Red Box"
+  },
+  {
+    "#": "17-28",
+    "Name": "Clean the floor",
+    "Needs": "17-27",
+    "Opens": "17-29",
+    "Items": "Bucket (L2)  Mop (L9)",
+    "Reward": "50 Energy Chest (L1)"
+  },
+  {
+    "#": "17-29",
+    "Name": "Remove broken lamp",
+    "Needs": "17-28",
+    "Opens": "17-30",
+    "Items": "Gardening Gloves (L3)  Two Empty Seed Bags (L2)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-30",
+    "Name": "Clean & polish left side table",
+    "Needs": "17-29",
+    "Opens": "17-31",
+    "Items": "2x Cloth (L1)  Polishing Wax (L7)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-31",
+    "Name": "Fix & place lamp to the left side table",
+    "Needs": "17-30",
+    "Opens": "17-32",
+    "Items": "2x Ball of Yarn (L3)  Screwdriver (L8)",
+    "Reward": "20 , \u00a0Fancy Blue Chest (I)"
+  },
+  {
+    "#": "17-32",
+    "Name": "Wash and place large rug on the floor",
+    "Needs": "17-31",
+    "Opens": "17-33",
+    "Items": "Brush (L6)  Power Detergent (L4)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-33",
+    "Name": "Remove broken items",
+    "Needs": "17-32",
+    "Opens": "17-34",
+    "Items": "Gardening Gloves (L3)  Empty Seed Bag (L1)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-34",
+    "Name": "Remove old plant",
+    "Needs": "17-33",
+    "Opens": "17-35",
+    "Items": "Gardening Gloves (L3)  Empty Seed Bag (L1)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-35",
+    "Name": "Wash and clean sofa table",
+    "Needs": "17-34",
+    "Opens": "17-36",
+    "Items": "Sponge (L3)  Turpentine (L6)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-36",
+    "Name": "Place new vase",
+    "Needs": "17-35",
+    "Opens": "17-37",
+    "Items": "Vase (L5)",
+    "Reward": "20 Blue Box"
+  },
+  {
+    "#": "17-37",
+    "Name": "Buy new phone and decorative items",
+    "Needs": "17-36",
+    "Opens": "17-38",
+    "Items": "900",
+    "Reward": "20 Bronze Coin Chest (L1)"
+  },
+  {
+    "#": "17-38",
+    "Name": "Place flower",
+    "Needs": "17-37",
+    "Opens": "17-39",
+    "Items": "Peony Flower (L6)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-39",
+    "Name": "Remove record player cover",
+    "Needs": "17-38",
+    "Opens": "17-40",
+    "Items": "Gardening Gloves (L3)  Empty Seed Bag (L1)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-40",
+    "Name": "Fix record player legs",
+    "Needs": "17-39",
+    "Opens": "17-41",
+    "Items": "Hammer (L6), Screws (L3)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-41",
+    "Name": "Fix vinyl record holder",
+    "Needs": "17-40",
+    "Opens": "17-42",
+    "Items": "Screwdriver (L8)",
+    "Reward": "20 Bronze Coin Chest (L1)"
+  },
+  {
+    "#": "17-42",
+    "Name": "Attach record player to legs",
+    "Needs": "17-41",
+    "Opens": "17-43",
+    "Items": "Gardening Gloves (L3),  Screws (L2)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-43",
+    "Name": "Fix the record player",
+    "Needs": "17-42",
+    "Opens": "17-44",
+    "Items": "Screwdriver (L8)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-44",
+    "Name": "Paint the record player",
+    "Needs": "17-43",
+    "Opens": "17-45",
+    "Items": "Paint Brush (L4)  Paint Can (L4)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-45",
+    "Name": "Put the record player on",
+    "Needs": "17-44",
+    "Opens": "17-62",
+    "Items": "Gardening Gloves (L3)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-46",
+    "Name": "Remove old foot stool",
+    "Needs": "17-16",
+    "Opens": "17-47",
+    "Items": "Wheelbarrow (L9)",
+    "Reward": "50 , Energy Chest (L1)"
+  },
+  {
+    "#": "17-47",
+    "Name": "Remove center rug",
+    "Needs": "17-46",
+    "Opens": "17-48",
+    "Items": "Gardening Gloves (L3),  Two Empty Seed Bags (L2)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-48",
+    "Name": "Remove dirty sofa pillows",
+    "Needs": "17-47",
+    "Opens": "17-49",
+    "Items": "Two Empty Seed Bags (L2)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-49",
+    "Name": "Clean spiders webs from the bookshelf",
+    "Needs": "17-48",
+    "Opens": "17-50",
+    "Items": "Dustpan (L7)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-50",
+    "Name": "Remove the broken painting",
+    "Needs": "17-49",
+    "Opens": "17-51",
+    "Items": "Gardening Gloves (L3),  Cloth (L1)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-51",
+    "Name": "Fix & clean fire place",
+    "Needs": "17-50",
+    "Opens": "17-52",
+    "Items": "Brush (L6),  Liquid Soap (L3)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-52",
+    "Name": "Lift up and clean book shelf",
+    "Needs": "17-51",
+    "Opens": "17-53",
+    "Items": "Sponge (L3),  Spray Bottle (L5)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-53",
+    "Name": "Clean and place books to the book shelf",
+    "Needs": "17-52",
+    "Opens": "17-54",
+    "Items": "Spray Bottle (L5),  Cloth (L1)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-54",
+    "Name": "Clean and place center rug",
+    "Needs": "17-53",
+    "Opens": "17-55",
+    "Items": "Brush (L6),  Power Detergent (L4)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-55",
+    "Name": "Fix and place foot stool",
+    "Needs": "17-54",
+    "Opens": "17-56",
+    "Items": "2x Yarn (L2),  Knife (L6)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-56",
+    "Name": "Fix sofa cushions",
+    "Needs": "17-55",
+    "Opens": "17-57",
+    "Items": "2x Balls of Yarn (L5),  Knife (L6)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-57",
+    "Name": "Place pillows",
+    "Needs": "17-56",
+    "Opens": "17-58",
+    "Items": "More Balls of Yarn (L7), 3x Sponge (L3)",
+    "Reward": "20 ,  Bronze Coin Chest (L1)"
+  },
+  {
+    "#": "17-58",
+    "Name": "Clean sofa table",
+    "Needs": "17-57",
+    "Opens": "17-59",
+    "Items": "Paint Brush (L4),  Turpentine (L6)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-59",
+    "Name": "Clean rubber plant",
+    "Needs": "17-58",
+    "Opens": "17-60",
+    "Items": "Dustpan (L7)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-60",
+    "Name": "Fix wallpapers",
+    "Needs": "17-59",
+    "Opens": "17-61",
+    "Items": "Paint Roller (L9),  Wooden Stool (L2)",
+    "Reward": "50 Gift Box (L1)"
+  },
+  {
+    "#": "17-61",
+    "Name": "Restore and polish left side speaker",
+    "Needs": "17-60",
+    "Opens": "17-62",
+    "Items": "Cloth (L1)  Turpentine (L6)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-62",
+    "Name": "Clean small table",
+    "Needs": "17-45, 17-61",
+    "Opens": "17-63",
+    "Items": "Sponge (L3),  Softener (L5)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-63",
+    "Name": "Place sea horse statue",
+    "Needs": "17-62",
+    "Opens": "17-64",
+    "Items": "Gardening Gloves (L3)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-64",
+    "Name": "Remove broken paintings",
+    "Needs": "17-63",
+    "Opens": "17-65",
+    "Items": "Wooden Stool (L2)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-65",
+    "Name": "Fix the wall",
+    "Needs": "17-64",
+    "Opens": "17-68",
+    "Items": "Paint Roller (L9)",
+    "Reward": "50 , Energy Chest (L1)"
+  },
+  {
+    "#": "17-66",
+    "Name": "Open safe",
+    "Needs": null,
+    "Opens": null,
+    "Items": null,
+    "Reward": null
+  },
+  {
+    "#": "17-67",
+    "Name": "Place Ursula and Charlie painting on the wall",
+    "Needs": null,
+    "Opens": null,
+    "Items": null,
+    "Reward": null
+  },
+  {
+    "#": "17-68",
+    "Name": "Open jammed Patio door",
+    "Needs": "17-65",
+    "Opens": "17-69",
+    "Items": "Mallet (L3)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-69",
+    "Name": "Remove debris",
+    "Needs": "17-68",
+    "Opens": "17-70",
+    "Items": "Gardening Gloves (L3)  Two Empty Seed Bags (L2)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-70",
+    "Name": "Remove rug",
+    "Needs": "17-69",
+    "Opens": "17-71",
+    "Items": "Wheelbarrow (L9)",
+    "Reward": "50 , \u00a0Simple Brown Box"
+  },
+  {
+    "#": "17-71",
+    "Name": "Remove leaves",
+    "Needs": "17-70",
+    "Opens": "17-72",
+    "Items": "Leaf Rake (L7)",
+    "Reward": "20 ,\u00a0Gift Box"
+  },
+  {
+    "#": "17-72",
+    "Name": "Wash stairs",
+    "Needs": "17-71",
+    "Opens": "17-73",
+    "Items": "Brush (L6),  Power Detergent (L4)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-73",
+    "Name": "Wash table",
+    "Needs": "17-72",
+    "Opens": "17-74",
+    "Items": "Spray Bottle (L5)  Sponge (L3)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-74",
+    "Name": "Remove old vase",
+    "Needs": "17-73",
+    "Opens": "17-75",
+    "Items": "Gardening Gloves (L3)  Empty Seed Bag (L1)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-75",
+    "Name": "Place vase",
+    "Needs": "17-74",
+    "Opens": "17-76",
+    "Items": "Vase (L5)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-76",
+    "Name": "Place flower",
+    "Needs": "17-75",
+    "Opens": "17-77",
+    "Items": "Orange Flower (L6)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-77",
+    "Name": "Remove vines",
+    "Needs": "17-76",
+    "Opens": "17-78",
+    "Items": "Knife (L6)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-78",
+    "Name": "Fix and clean trolley",
+    "Needs": "17-77",
+    "Opens": "17-79",
+    "Items": "Paint Brush (L4),  Liquid Soap (L3)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-79",
+    "Name": "Remove old vases",
+    "Needs": "17-78",
+    "Opens": "17-80",
+    "Items": "Wheelbarrow (L9)",
+    "Reward": "50 , \u00a0Energy Chest"
+  },
+  {
+    "#": "17-80",
+    "Name": "Clean patio wall",
+    "Needs": "17-79",
+    "Opens": "17-81",
+    "Items": "Brush (L6),  Softener (L5)",
+    "Reward": "20 ,  Bronze Coin Chest (L1)"
+  },
+  {
+    "#": "17-81",
+    "Name": "Place new vases",
+    "Needs": "17-80",
+    "Opens": "17-82",
+    "Items": "3x Vase (L5)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-82",
+    "Name": "Place plant",
+    "Needs": "17-81",
+    "Opens": "17-83, 17-112",
+    "Items": "2x Large Seed Bag (L4)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-83",
+    "Name": "Remove broken bean bag chairs",
+    "Needs": "17-82",
+    "Opens": "17-84",
+    "Items": "Wheelbarrow (L9)",
+    "Reward": "50 , \u00a0Simple Brown Box"
+  },
+  {
+    "#": "17-84",
+    "Name": "Remove weeds",
+    "Needs": "17-83",
+    "Opens": "17-85",
+    "Items": "Spade (L5),  Gardening Gloves (L3)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-85",
+    "Name": "Fix broken floor",
+    "Needs": "17-84",
+    "Opens": "17-86",
+    "Items": "2x Mosaic (L2)  Mallet (L3)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-86",
+    "Name": "Wash the floor",
+    "Needs": "17-85",
+    "Opens": "17-87",
+    "Items": "Mop (L9),  Bucket (L2)",
+    "Reward": "50 , \u00a0Fancy Blue Chest (I)"
+  },
+  {
+    "#": "17-87",
+    "Name": "Clean up and place rug",
+    "Needs": "17-86",
+    "Opens": "17-88",
+    "Items": "Brush (L6),  Toothpaste (L1)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-88",
+    "Name": "Remove old sofa",
+    "Needs": "17-87",
+    "Opens": "17-89",
+    "Items": "Saw (L10),  Wheelbarrow (L9)",
+    "Reward": "50 , \u00a0Gift Box"
+  },
+  {
+    "#": "17-89",
+    "Name": "Remove broken chairs",
+    "Needs": "17-88",
+    "Opens": "17-90",
+    "Items": "Gardening Gloves (L3)",
+    "Reward": "8 , \u00a0Simple Brown Box"
+  },
+  {
+    "#": "17-90",
+    "Name": "Remove dirty old rug",
+    "Needs": "17-89",
+    "Opens": "17-91",
+    "Items": "Wheelbarrow (L9)",
+    "Reward": "50 , \u00a0Brown Chest (I)"
+  },
+  {
+    "#": "17-91",
+    "Name": "Clean the floor",
+    "Needs": "17-90",
+    "Opens": "17-92",
+    "Items": "Leaf Rake (L7),  Brush (L6)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-92",
+    "Name": "Fix and clean old parasol",
+    "Needs": "17-91",
+    "Opens": "17-93",
+    "Items": "2x Yarn (L2),  Spray Bottle (L5)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-93",
+    "Name": "Remove weeds",
+    "Needs": "17-92",
+    "Opens": "17-94",
+    "Items": "Knife (L6),  Gardening Gloves (L3)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-94",
+    "Name": "Fix the broken wooden fence",
+    "Needs": "17-93",
+    "Opens": "17-95",
+    "Items": "Hammer (L6), 2x Wood (L4)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-95",
+    "Name": "Clean up and place rug",
+    "Needs": "17-94",
+    "Opens": "17-96",
+    "Items": "Brush (L6),  Power Detergent (L4)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-96",
+    "Name": "Buy new sofa",
+    "Needs": "17-95",
+    "Opens": "17-97",
+    "Items": "5500",
+    "Reward": "50 , \u00a0Energy Chest"
+  },
+  {
+    "#": "17-97",
+    "Name": "Plant the plants",
+    "Needs": "17-96",
+    "Opens": "17-98",
+    "Items": "3x Large Seed Bag (L4)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-98",
+    "Name": "Restore and place chairs",
+    "Needs": "17-97",
+    "Opens": "17-99",
+    "Items": "More Balls of Yarn (L7), 2x Sponge (L3)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-99",
+    "Name": "Place lanterns",
+    "Needs": "17-98",
+    "Opens": "17-100",
+    "Items": "3x Post Light (L6)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-100",
+    "Name": "Restore and place bean bag chairs",
+    "Needs": "17-99",
+    "Opens": "17-101",
+    "Items": "2x More Balls of Yarn (L6),  Two Empty Seed Bags (L2)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-101",
+    "Name": "Clean path steps",
+    "Needs": "17-100, 17-134, 17-147",
+    "Opens": "17-102",
+    "Items": "Sponge (L3),  Power Detergent (L4)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-102",
+    "Name": "Remove weeds",
+    "Needs": "17-101",
+    "Opens": "17-103",
+    "Items": "Hedge Shears (L8)",
+    "Reward": "20 , \u00a0Bronze Coin Chest"
+  },
+  {
+    "#": "17-103",
+    "Name": "Replace flowerbed old wood wall",
+    "Needs": "17-102",
+    "Opens": "17-104",
+    "Items": "Mallet (L3),  Wood (L4)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-104",
+    "Name": "Remove flowerbed weeds",
+    "Needs": "17-103",
+    "Opens": "17-105",
+    "Items": "Hedge Shears (L8)",
+    "Reward": "20 , \u00a0Simple Brown Box"
+  },
+  {
+    "#": "17-105",
+    "Name": "Clean up flowerbed ground dirt",
+    "Needs": "17-104",
+    "Opens": "17-106",
+    "Items": "Soil Rake (L12)",
+    "Reward": "50 , \u00a0Gift Box"
+  },
+  {
+    "#": "17-106",
+    "Name": "Place flowers to flowerbed",
+    "Needs": "17-105",
+    "Opens": "17-107",
+    "Items": "3x Peony Flower (L6),  Orange Flower (L6)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-107",
+    "Name": "Replace flowerbed old wood wall",
+    "Needs": "17-106",
+    "Opens": "17-108",
+    "Items": "Mallet (L3),  Wood (L4)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-108",
+    "Name": "Remove flowerbed weeds",
+    "Needs": "17-107",
+    "Opens": "17-109",
+    "Items": "Hedge Shears (L8)",
+    "Reward": "20 , \u00a0Simple Brown Box"
+  },
+  {
+    "#": "17-109",
+    "Name": "Clean up flowerbed ground dirt",
+    "Needs": "17-108",
+    "Opens": "17-110",
+    "Items": "Soil Rake (L12)",
+    "Reward": "50 , \u00a0Gift Box"
+  },
+  {
+    "#": "17-110",
+    "Name": "Place flowers to flowerbed",
+    "Needs": "17-109",
+    "Opens": "17-111",
+    "Items": "2x Large Seed Bag (L4), 2x Peony Flower (L6)",
+    "Reward": "20 , \u00a0Red Box"
+  },
+  {
+    "#": "17-111",
+    "Name": "Clean pavement",
+    "Needs": "17-110",
+    "Opens": null,
+    "Items": "Broom (L11)",
+    "Reward": "50 , \u00a0Gift Box"
+  },
+  {
+    "#": "17-112",
+    "Name": "Remove leaves",
+    "Needs": "17-82",
+    "Opens": "17-113",
+    "Items": "Leaf Rake (L7)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-113",
+    "Name": "Remove old vases",
+    "Needs": "17-112",
+    "Opens": "17-114",
+    "Items": "Gardening Gloves (L3)  Empty Seed Bag (L1)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-114",
+    "Name": "Place new vases and plants",
+    "Needs": "17-113",
+    "Opens": "17-115, 17-135",
+    "Items": "2x Vase (L6)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-115",
+    "Name": "Move wasps nest out",
+    "Needs": "17-114",
+    "Opens": "17-116",
+    "Items": "Gardening Gloves (L3)  Empty Seed Bag (L1)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-116",
+    "Name": "Remove overgrown vegetation",
+    "Needs": "17-115",
+    "Opens": "17-117",
+    "Items": "Soil Rake (L12)",
+    "Reward": "50 , \u00a0Fancy Blue Chest (II)"
+  },
+  {
+    "#": "17-117",
+    "Name": "Remove fallen tree",
+    "Needs": "17-116",
+    "Opens": "17-118",
+    "Items": "Axe (L4)  Wheelbarrow (L9)",
+    "Reward": "20 , \u00a0Fancy Blue Chest (I)"
+  },
+  {
+    "#": "17-118",
+    "Name": "Fix patio left wall",
+    "Needs": "17-117",
+    "Opens": "17-119",
+    "Items": "Toolbox (L3)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-119",
+    "Name": "Restore and polish old cabinet",
+    "Needs": "17-118",
+    "Opens": "17-120",
+    "Items": "2x Cloth (L1)  Polishing Wax (L7)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-120",
+    "Name": "Remove weeds from old fence",
+    "Needs": "17-119",
+    "Opens": "17-121",
+    "Items": "Gardening Gloves (L3)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-121",
+    "Name": "Fix old wooden fence",
+    "Needs": "17-120",
+    "Opens": "17-122",
+    "Items": "Hammer (L6) 2x Wood (L4)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-122",
+    "Name": "Remove bricks",
+    "Needs": "17-121",
+    "Opens": "17-123",
+    "Items": "Gardening Gloves (L3)  Wheelbarrow (L9)",
+    "Reward": "50 , \u00a0Red Box"
+  },
+  {
+    "#": "17-123",
+    "Name": "Fix and clean patio oven",
+    "Needs": "17-122",
+    "Opens": "17-124",
+    "Items": "Brush (L6)  Spray Bottle (L5)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-124",
+    "Name": "Lift top counter back",
+    "Needs": "17-123",
+    "Opens": "17-125",
+    "Items": "Gardening Gloves (L3)  Wood (L2)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-125",
+    "Name": "Clean bricks and lay them back on top",
+    "Needs": "17-124",
+    "Opens": "17-126",
+    "Items": "Brush (L6)  Spray Bottle (L5)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-126",
+    "Name": "Clean and fix patio oven top",
+    "Needs": "17-125",
+    "Opens": "17-127",
+    "Items": "Brush (L6)  Liquid Soap (L3)",
+    "Reward": "20 , \u00a0Energy Chest"
+  },
+  {
+    "#": "17-127",
+    "Name": "Place firewood and pizza shovel",
+    "Needs": "17-126",
+    "Opens": "17-128",
+    "Items": "Knife (L6) 2x Wood (L4)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-128",
+    "Name": "Clean up cabinet corner",
+    "Needs": "17-127",
+    "Opens": "17-129",
+    "Items": "Sponge (L3)  Spray Bottle (L5)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-129",
+    "Name": "Remove leaves",
+    "Needs": "17-128",
+    "Opens": "17-130",
+    "Items": "Gardening Gloves (L3)  Empty Seed Bag (L1)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-130",
+    "Name": "Fix patio wall",
+    "Needs": "17-129",
+    "Opens": "17-131",
+    "Items": "Hammer (L6) 2x Wood (L4)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-131",
+    "Name": "Fix the grill",
+    "Needs": "17-130",
+    "Opens": "17-132",
+    "Items": "Screwdriver (L8)  Screws (L3)",
+    "Reward": "20 , \u00a0Blue Box"
+  },
+  {
+    "#": "17-132",
+    "Name": "Paint the grill",
+    "Needs": "17-131",
+    "Opens": "17-133",
+    "Items": "Paint Brush (L4)  Paint Can (L4)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-133",
+    "Name": "Fix small table",
+    "Needs": "17-132",
+    "Opens": "17-134",
+    "Items": "Hammer (L6)  Wood (L4)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-134",
+    "Name": "Wash the floor",
+    "Needs": "17-133",
+    "Opens": "17-101",
+    "Items": "Mop (L9)  Bucket (L2)",
+    "Reward": "50 , \u00a0Bronze Coin Chest"
+  },
+  {
+    "#": "17-135",
+    "Name": "Remove broken chairs",
+    "Needs": "17-114",
+    "Opens": "17-136",
+    "Items": "Gardening Gloves (L3)  Empty Seed Bag (L1)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-136",
+    "Name": "Remove broken table",
+    "Needs": "17-135",
+    "Opens": "17-137",
+    "Items": "Gardening Gloves (L3)  Wheelbarrow (L9)",
+    "Reward": "50 , \u00a0Simple Brown Box"
+  },
+  {
+    "#": "17-137",
+    "Name": "Fix holes on the floor",
+    "Needs": "17-136",
+    "Opens": "17-138",
+    "Items": "Mallet (L3) 2x Wood (L4)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-138",
+    "Name": "Wash the floor",
+    "Needs": "17-137",
+    "Opens": "17-139",
+    "Items": "Brush (L6)  Bucket (L2)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-139",
+    "Name": "Remove plant",
+    "Needs": "17-138",
+    "Opens": "17-140",
+    "Items": "Wooden Stool (L2),  Gardening Gloves (L3)",
+    "Reward": "8"
+  },
+  {
+    "#": "17-140",
+    "Name": "Clean the wall",
+    "Needs": "17-139",
+    "Opens": "17-141",
+    "Items": "Brush (L6),  Bucket (L2)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-141",
+    "Name": "Fix wooden wall",
+    "Needs": "17-140",
+    "Opens": "17-142",
+    "Items": "Saw (L10), 2x Wood (L4)",
+    "Reward": "50 , \u00a0Fancy Blue Chest (II)"
+  },
+  {
+    "#": "17-142",
+    "Name": "Place vase",
+    "Needs": "17-141",
+    "Opens": "17-143",
+    "Items": "Vase (L5)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-143",
+    "Name": "Place small flower",
+    "Needs": "17-142",
+    "Opens": "17-144",
+    "Items": "Orange Flower (L6)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-144",
+    "Name": "Remove weeds",
+    "Needs": "17-143",
+    "Opens": "17-145",
+    "Items": "Hedge Shears (L8)",
+    "Reward": "20 , \u00a0Energy Chest"
+  },
+  {
+    "#": "17-145",
+    "Name": "Place flowers",
+    "Needs": "17-144",
+    "Opens": "17-146",
+    "Items": "2x Orange Flower (L6)",
+    "Reward": "20"
+  },
+  {
+    "#": "17-146",
+    "Name": "Place dining chairs",
+    "Needs": "17-145",
+    "Opens": "17-147",
+    "Items": "3x Chair (L5)",
+    "Reward": "20 , \u00a0Gift Box"
+  },
+  {
+    "#": "17-147",
+    "Name": "Clean and place dining table",
+    "Needs": "17-146",
+    "Opens": "17-101",
+    "Items": "Brush (L6),  Liquid Soap (L3)",
+    "Reward": "20"
   }
 ]
